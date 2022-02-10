@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# convert DGT-CGPR json to geopackage
+# convert DGT-CGPR JSON to GeoPackage
 # run: predios2gpkg.py <url>
 
 """ 
@@ -19,7 +19,7 @@ try:
 except:
   import ogr, osr
 
-# read json
+# read JSON
 #response = requests.get("https://snic.dgterritorio.gov.pt/geoportal/dgt_cadastro/api/v1/cadastro/cgpr/predios?dico=1214&dicofre=121411&seccao=C")
 response = requests.get(sys.argv[1])
 predios = json.loads(response.text)
@@ -43,7 +43,7 @@ layer.CreateField(ogr.FieldDefn("area", ogr.OFTInteger))
 
 
 for predio in predios:
-    # json fields
+    # JSON fields
     #dicofre = predio["dicofre"]
     #prd     = predio["prd"]
     #area    = predio["area_m2"]
