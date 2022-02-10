@@ -15,5 +15,5 @@ predios2gpkg.py "https://snic.dgterritorio.gov.pt/geoportal/dgt_cadastro/api/v1/
 
 ```shell
 # DGT-cadastro-CGPR json:
-curl -s 'https://snic.dgterritorio.gov.pt/geoportal/dgt_cadastro/api/v1/cadastro/cgpr/predios?dico=1214&dicofre=121411&seccao=C'
+curl -s "https://snic.dgterritorio.gov.pt/geoportal/dgt_cadastro/api/v1/cadastro/cgpr/predios?dico=1214&dicofre=121411&seccao=C"
 ```
