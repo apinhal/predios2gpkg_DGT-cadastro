@@ -1,6 +1,6 @@
 # predios2gpkg
 
-**convert DGT-cadastro-CGPR json to geopackage**
+**convert DGT-cadastro-CGPR JSON to GeoPackage**
 
 ## run 
 ```shell
@@ -14,6 +14,6 @@ predios2gpkg.py "https://snic.dgterritorio.gov.pt/geoportal/dgt_cadastro/api/v1/
 - <https://snic.dgterritorio.gov.pt/visualizadorCadastro>
 
 ```shell
-# DGT-cadastro-CGPR json:
+# DGT-cadastro-CGPR JSON:
 curl -s "https://snic.dgterritorio.gov.pt/geoportal/dgt_cadastro/api/v1/cadastro/cgpr/predios?dico=1214&dicofre=121411&seccao=C"
 ```
