@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# convert DGT-CGPR JSON to GeoPackage
+# convert DGT-cadastro JSON to GeoPackage
 # run: predios2gpkg.py <url>
 
 """ 
