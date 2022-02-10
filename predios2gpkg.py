@@ -25,7 +25,7 @@ response = requests.get(sys.argv[1])
 predios = json.loads(response.text)
 
 # gpkg output
-#gpkgFile = "predio.gpkg"
+#gpkgFile = "predios.gpkg"
 gpkgFile = predios[0]["dicofre"] + "-" + predios[0]["seccao"] + ".gpkg"
 driver = ogr.GetDriverByName("GPKG")
 if os.path.exists(gpkgFile):
