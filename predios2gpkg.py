@@ -38,14 +38,15 @@ srs.ImportFromEPSG(3763)
 layer = dataSource.CreateLayer(gpkgFile, srs, ogr.wkbPolygon)
 ## create layer attributes fields
 layer.CreateField(ogr.FieldDefn("dicofre", ogr.OFTString))
-layer.CreateField(ogr.FieldDefn("prd", ogr.OFTString))
-layer.CreateField(ogr.FieldDefn("area", ogr.OFTInteger))
-
+layer.CreateField(ogr.FieldDefn("Seccao", ogr.OFTString))
+layer.CreateField(ogr.FieldDefn("Predio", ogr.OFTString))
+layer.CreateField(ogr.FieldDefn("Area_m", ogr.OFTInteger))
 
 for predio in predios:
     # JSON fields
     #dicofre = predio["dicofre"]
-    #prd     = predio["prd"]
+    #seccao  = predio["seccao"]
+    #nprd     = predio["nprd"]
     #area    = predio["area_m2"]
     wkt     = predio["wkt"]
     
@@ -53,8 +54,9 @@ for predio in predios:
     feature = ogr.Feature(layer.GetLayerDefn())
     # set feature attributes from json
     feature.SetField("dicofre", predio["dicofre"])
-    feature.SetField("prd",     predio["prd"])
-    feature.SetField("area",    predio["area_m2"])
+    feature.SetField("Seccao",  predio["seccao"])
+    feature.SetField("Predio",  predio["nprd"])
+    feature.SetField("Area_m2", predio["area_m2"])
     # set feature geometry (polygon) from Well Known Txt
     feature.SetGeometry(ogr.CreateGeometryFromWkt(wkt))
     layer.CreateFeature(feature)
