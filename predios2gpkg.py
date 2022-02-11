@@ -40,7 +40,7 @@ layer = dataSource.CreateLayer(gpkgFile, srs, ogr.wkbPolygon)
 layer.CreateField(ogr.FieldDefn("dicofre", ogr.OFTString))
 layer.CreateField(ogr.FieldDefn("Seccao", ogr.OFTString))
 layer.CreateField(ogr.FieldDefn("Predio", ogr.OFTString))
-layer.CreateField(ogr.FieldDefn("Area_m", ogr.OFTInteger))
+layer.CreateField(ogr.FieldDefn("Area_m2", ogr.OFTInteger))
 
 for predio in predios:
     # JSON fields
